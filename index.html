@@ -3,96 +3,532 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>AMIR HOSSIN | Galaxy</title>
 
 <style>
-*{box-sizing:border-box}
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
 
 body{
-  margin:0;
-  font-family:Tahoma,Arial,sans-serif;
-  color:#fff;
-  min-height:100vh;
-  overflow-x:hidden;
-  background:
-    radial-gradient(circle at 20% 20%,rgba(108,67,255,.35),transparent 25%),
-    radial-gradient(circle at 80% 30%,rgba(0,213,255,.22),transparent 22%),
-    radial-gradient(circle at 50% 90%,rgba(255,0,153,.18),transparent 28%),
-    #050517;
+    margin:0;
+    font-family:Tahoma,Arial,sans-serif;
+    color:white;
+    background:#05051a;
+    overflow-x:hidden;
 }
 
-body:before,body:after{
-  content:"";
-  position:fixed;
-  inset:0;
-  pointer-events:none;
-  z-index:-1;
-  background-image:
-   radial-gradient(circle,rgba(255,255,255,.9) 0 1px,transparent 1.5px),
-   radial-gradient(circle,rgba(160,190,255,.7) 0 1px,transparent 1.5px);
-  background-size:110px 110px,170px 170px;
-  background-position:20px 30px,80px 10px;
-  opacity:.65;
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    background:
+    radial-gradient(circle at 20% 20%,#302080 0,transparent 30%),
+    radial-gradient(circle at 80% 38%,#064b70 0,transparent 30%),
+    radial-gradient(circle at 45% 90%,#4b0959 0,transparent 35%),
+    #05051a;
 }
 
-body:after{
-  filter:blur(.4px);
-  transform:scale(1.3);
-  opacity:.25;
-}
-
-header{
-  text-align:center;
-  padding:55px 20px 35px;
-}
-
-.logo{
-  font-size:clamp(38px,9vw,78px);
-  font-weight:900;
-  letter-spacing:4px;
-  background:linear-gradient(90deg,#fff,#8ee8ff,#b98cff,#fff);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  text-shadow:0 0 30px rgba(118,100,255,.5);
-}
-
-.subtitle{
-  color:#bfc7ff;
-  font-size:16px;
-  margin-top:8px;
-}
-
-nav{
-  display:flex;
-  justify-content:center;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:20px auto 0;
-}
-
-nav a{
-  color:#fff;
-  text-decoration:none;
-  padding:10px 17px;
-  border:1px solid #ffffff25;
-  border-radius:999px;
-  background:#ffffff0d;
-  backdrop-filter:blur(8px);
-}
-
-nav a:hover{
-  background:#ffffff18;
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-2;
+    opacity:.6;
+    background-image:
+    radial-gradient(#fff 1px,transparent 1px),
+    radial-gradient(#fff 1px,transparent 1px);
+    background-size:90px 90px,140px 140px;
+    background-position:10px 20px,50px 70px;
 }
 
 .container{
-  width:min(1050px,92%);
-  margin:auto;
+    max-width:1050px;
+    margin:auto;
+    padding:22px;
+}
+
+header{
+    min-height:88vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
 .hero{
-  text-align:center;
-  padding:35px 20px 25px;
-  border:1px solid #ffffff18;
-  border-radius:28px;
-  background:linear-gradient(135deg,#ffffff0c,#
+    width:min(850px,100%);
+    padding:40px 22px;
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(5,5,25,.45);
+    backdrop-filter:blur(12px);
+    border-radius:30px;
+    box-shadow:0 20px 80px rgba(0,0,0,.4);
+}
+
+.logo{
+    width:110px;
+    height:110px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    font-size:30px;
+    font-weight:900;
+    background:
+    radial-gradient(circle,#d8b4fe 0,#8b5cf6 35%,#17103e 72%);
+    box-shadow:0 0 45px #8b5cf6;
+}
+
+h1{
+    font-size:clamp(42px,10vw,88px);
+    margin:5px 0;
+    background:linear-gradient(90deg,#fff,#d8b4fe,#67e8f9);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    font-size:18px;
+    color:#c8c3df;
+    line-height:1.8;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.btn{
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:13px 22px;
+    border-radius:999px;
+    border:1px solid rgba(255,255,255,.14);
+    background:linear-gradient(135deg,#7c3aed,#0891b2);
+    font-weight:bold;
+    box-shadow:0 8px 30px #0005;
+}
+
+nav{
+    position:sticky;
+    top:10px;
+    z-index:10;
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin:-30px auto 30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    padding:10px 16px;
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:999px;
+    background:#090722cc;
+    backdrop-filter:blur(10px);
+}
+
+section{
+    margin:45px 0;
+}
+
+.title{
+    font-size:30px;
+    margin-bottom:18px;
+}
+
+.sub{
+    color:#c8c3df;
+    margin-top:-10px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+    gap:16px;
+}
+
+.card{
+    background:rgba(18,13,48,.72);
+    border:1px solid rgba(255,255,255,.14);
+    border-radius:22px;
+    padding:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 10px 35px #0004;
+}
+
+.icon{
+    font-size:42px;
+}
+
+.card h3{
+    margin:10px 0;
+}
+
+.card p{
+    color:#c8c3df;
+    line-height:1.7;
+}
+
+input[type=file]{
+    width:100%;
+    margin-top:12px;
+    color:#ddd;
+}
+
+.preview{
+    margin-top:14px;
+    display:grid;
+    gap:12px;
+}
+
+.preview img,
+.preview video{
+    width:100%;
+    max-height:360px;
+    object-fit:contain;
+    border-radius:16px;
+    background:#02020d;
+}
+
+audio{
+    width:100%;
+    margin-top:10px;
+}
+
+footer{
+    text-align:center;
+    color:#c8c3df;
+    padding:45px 10px;
+    border-top:1px solid rgba(255,255,255,.14);
+    margin-top:60px;
+}
+
+.small{
+    font-size:13px;
+    color:#aaa;
+}
+
+@media(max-width:600px){
+
+    .container{
+        padding:14px;
+    }
+
+    .hero{
+        padding:35px 15px;
+    }
+
+    h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<header id="home">
+
+<div class="hero">
+
+<div class="logo">
+AH
+</div>
+
+<h1>
+AMIR HOSSIN
+</h1>
+
+<p>
+به دنیای شخصی و کهکشانی من خوش اومدی 🌌
+<br>
+اینجا می‌تونم موزیک‌ها، عکس‌ها و ویدیوهای موردعلاقه‌ام رو قرار بدم.
+</p>
+
+<div class="buttons">
+
+<a class="btn" href="#music">
+🎵 آهنگ‌ها
+</a>
+
+<a class="btn" href="#photos">
+🖼️ عکس‌ها
+</a>
+
+<a class="btn" href="#videos">
+🎬 فیلم‌ها
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+<nav>
+
+<a href="#home">
+خانه
+</a>
+
+<a href="#music">
+🎵 موزیک
+</a>
+
+<a href="#photos">
+🖼️ گالری
+</a>
+
+<a href="#videos">
+🎬 ویدیو
+</a>
+
+</nav>
+
+
+<section id="music">
+
+<h2 class="title">
+🎵 موزیک‌های من
+</h2>
+
+<p class="sub">
+یک آهنگ را از گوشی انتخاب کن تا پخش شود.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">
+🎧
+</div>
+
+<h3>
+پخش آهنگ
+</h3>
+
+<p>
+فایل MP3 یا هر فایل صوتی را انتخاب کن.
+</p>
+
+<input
+id="audioInput"
+type="file"
+accept="audio/*"
+>
+
+<div
+id="audioPreview"
+class="preview">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="photos">
+
+<h2 class="title">
+🖼️ گالری عکس
+</h2>
+
+<p class="sub">
+عکس‌هایت را انتخاب کن تا در سایت نمایش داده شوند.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">
+📸
+</div>
+
+<h3>
+عکس‌های من
+</h3>
+
+<input
+id="imageInput"
+type="file"
+accept="image/*"
+multiple
+>
+
+<div
+id="imagePreview"
+class="preview">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="videos">
+
+<h2 class="title">
+🎬 ویدیوهای من
+</h2>
+
+<p class="sub">
+ویدیوها را از گوشی انتخاب کن.
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<div class="icon">
+🚀
+</div>
+
+<h3>
+ویدیوها
+</h3>
+
+<input
+id="videoInput"
+type="file"
+accept="video/*"
+multiple
+>
+
+<div
+id="videoPreview"
+class="preview">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<strong>
+AMIR HOSSIN 🌌
+</strong>
+
+<br>
+
+<span class="small">
+Galaxy personal website
+</span>
+
+</footer>
+
+</div>
+
+
+<script>
+
+function fileUrl(file){
+    return URL.createObjectURL(file);
+}
+
+
+document.querySelector("#audioInput").onchange=function(e){
+
+    const box=document.querySelector("#audioPreview");
+
+    box.innerHTML="";
+
+    [...e.target.files].forEach(function(file){
+
+        const audio=document.createElement("audio");
+
+        audio.controls=true;
+
+        audio.src=fileUrl(file);
+
+        box.append(audio);
+
+        const name=document.createElement("div");
+
+        name.textContent=file.name;
+
+        name.className="small";
+
+        box.append(name);
+
+    });
+
+};
+
+
+document.querySelector("#imageInput").onchange=function(e){
+
+    const box=document.querySelector("#imagePreview");
+
+    box.innerHTML="";
+
+    [...e.target.files].forEach(function(file){
+
+        const img=document.createElement("img");
+
+        img.src=fileUrl(file);
+
+        box.append(img);
+
+    });
+
+};
+
+
+document.querySelector("#videoInput").onchange=function(e){
+
+    const box=document.querySelector("#videoPreview");
+
+    box.innerHTML="";
+
+    [...e.target.files].forEach(function(file){
+
+        const video=document.createElement("video");
+
+        video.controls=true;
+
+        video.playsInline=true;
+
+        video.src=fileUrl(file);
+
+        box.append(video);
+
+    });
+
+};
+
+</script>
+
+</body>
+</html>
